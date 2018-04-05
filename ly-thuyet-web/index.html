@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>School project</title>
+    <link rel="stylesheet" href="style/index.css"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no"/>
+  </head>
+  <body>
+    <div id="header">
+      <div id="left">
+        Welcome to Koder17's paradise
+      </div>
+      <a href="index.html"><div id="logo"></div></a>
+      <div id="right">
+        idk what to place here .....
+      </div>
+    </div>
+    <div id="container">
+      <div id="main">
+      </div><div id="nav">
+        <div class="wrapper">
+          <ul type="none">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = function(){
+        var urlstr = window.location.href;
+        var url = new URL(urlstr);
+        var page = url.searchParams.get("page") || null;
+        if (!page)
+        {
+          page = "homepage";
+        }
+        var xml = new XMLHttpRequest();
+        xml.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+          {
+            document.querySelector("#main").innerHTML = xml.response;
+          }
+          else if (this.readyState == 4 && this.status != 200)
+          {
+            document.querySelector("#main").innerHTML = '<div class="wrapper">' + this.status + '</div>';
+          }
+        }
+        xml.open("GET", page + ".html", true);
+        xml.send();
+      }
+    </script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
