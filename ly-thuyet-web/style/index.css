@@ -143,17 +143,22 @@ a:visited {
   border: 1px solid white;
   padding: 3px;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .last {
   display: flex;
   flex-direction: row;
   flex: 1;
+  max-height: 22px;
 }
 
 .price {
   flex: 1;
   color: Lime;
+  margin-bottom: 0;
 }
 
 .detail {
@@ -162,26 +167,19 @@ a:visited {
   background-color: #19B5FE;
   text-align: center;
   cursor: pointer;
-}
-
-.product a {
-  flex: 1;
-  padding: 1px 5px;
-  background-color: #19B5FE;
-  text-align: center;
-  cursor: pointer;
+  margin-bottom: 0;
 }
 
 .name {
   flex: 1;
 }
 
-.picture {
+.product img {
   flex: 1;
   background-color: white;
 }
 
-.wrapper img {
+.wrapper>img {
   float: left;
   margin-right: 50px;
 }
