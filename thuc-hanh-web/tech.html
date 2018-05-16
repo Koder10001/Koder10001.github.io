@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Thế giới di động</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no, width=device-width"/>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="search"><input placeholder="Bạn tìm gì..." type="search"/></div>
+        <div id="menu">
+          <a href="index.html"><div class="products">Trang chủ</div></a>
+          <a href="dtdd.html"><div class="products">Điện thoại</div></a>
+          <a href="tablet.html"><div class="products">Tablet</div></a>
+          <a href="laptop.html"><div class="products">Hàng mới</div></a>
+          <a href="phukien.html"><div class="products">Chả giò</div></a>
+          <a href="tech.html"><div class="products focus">Công nghệ</div></a>
+          <a href="hoidap.html"><div class="products">Hỏi đáp</div></a>
+        </div>
+      </div>
+      <div id="body">
+        <div id="txt">
+          <textarea id="str"></textarea>
+        </div>
+        <div class="but" onclick='document.querySelector("#a").value = btoa(document.querySelector("#str").value)'>Encode</div>
+        <div class="but" onclick='document.querySelector("#a").value = atob(document.querySelector("#str").value)'>Decode</div>
+        <div id="code">
+          <textarea id="a"></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
